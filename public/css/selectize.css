@@ -1,0 +1,363 @@
+/*! selectize.css - v0.6.14 | https://github.com/brianreavis/selectize.js | Apache License (v2) */
+
+
+/* --- file: "src/selectize.css" --- */
+
+
+/**********************************************************
+* THEME: "default"                                       *
+**********************************************************/
+
+.selectize-control {
+    width: 100%;
+    font-family: "Arial";
+    font-size: 12px;
+    color: #999999
+}
+
+.selectize-control.default.multi .selectize-input>div {
+    color: #3d5d18;
+    background: #fff;
+}
+
+.selectize-control.default.multi .selectize-input>div.active {}
+
+.selectize-control.default.multi .selectize-input.disabled>div {}
+
+
+/**********************************************************
+* BASIC AESTHETIC STYLES (common)                        *
+**********************************************************/
+
+.selectize-input,
+.selectize-control.single .selectize-input.focus {
+    background: #fff;
+    padding: 10px;
+    cursor: text;
+    display: inline-block;
+    width: 100%;
+}
+
+.selectize-input.focus {}
+
+.selectize-input.dropdown-active {}
+
+.selectize-input.full {
+    background-color: #f2f2f2;
+}
+
+.selectize-input.dropdown-active::before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    background: #f2f2f2;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.selectize-control.multi .selectize-input.has-items {
+    padding-top: 8px !important;
+    padding-bottom: 3px !important;
+}
+
+.selectize-control.multi .selectize-input>div {
+    cursor: pointer;
+    margin: 0 5px 5px 0;
+    padding: 1px 5px;
+}
+
+.selectize-input>div:last-child {
+    margin-right: 5px;
+}
+
+.selectize-input>input {
+    margin-right: 2px !important;
+}
+
+.selectize-dropdown,
+.selectize-input,
+.selectize-control.single .selectize-input.dropdown-active {
+    border: 1px solid #d0d0d0;
+}
+
+.selectize-dropdown {
+    background: #fff;
+    margin-top: -1px;
+    border-top: 0 none;
+    /* width: 317px!important; */
+}
+
+.selectize-dropdown-content {
+    max-height: 200px;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+}
+
+.selectize-dropdown [data-selectable],
+.selectize-dropdown .optgroup-header {
+    padding: 6px 9px;
+}
+
+.selectize-dropdown .optgroup:first-child .optgroup-header {
+    border-top: 0 none;
+}
+
+.selectize-dropdown .optgroup-header {
+    background: #fafafa;
+    border-bottom: 1px solid #e8e8e8;
+    border-top: 1px solid #e8e8e8;
+    font-weight: bold;
+    font-size: 0.8em;
+    cursor: default;
+}
+
+.selectize-dropdown .create {
+    color: #a0a0a0;
+}
+
+.selectize-dropdown .active {
+    background-color: #f5f5f5;
+}
+
+.selectize-dropdown,
+.selectize-input,
+.selectize-input input {
+    color: #999999;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    line-height: 20px;
+    -webkit-font-smoothing: antialiased;
+}
+
+.selectize-dropdown [data-selectable] .highlight {
+    background: rgba(255, 237, 40, 0.4);
+    border-radius: 1px;
+}
+
+.selectize-input.disabled,
+.selectize-input.disabled * {
+    cursor: default !important;
+}
+
+
+/**********************************************************
+* BASIC AESTHETIC STYLES (single)                        *
+**********************************************************/
+
+.selectize-control.single .selectize-input {
+    cursor: pointer;
+    background: #fff;
+}
+
+.selectize-control.single .selectize-input::after {
+    content: ' ';
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    margin-top: -2px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 5px 0 5px;
+    border-color: #808080 transparent transparent transparent;
+}
+
+.selectize-control.single .selectize-input.dropdown-active::after {
+    margin-top: -3px;
+    border-width: 0 5px 5px 5px;
+    border-color: transparent transparent #808080 transparent;
+}
+
+.selectize-control.single .selectize-input.disabled {
+    opacity: 0.5;
+}
+
+.selectize-control input[type="text"] {
+    position: absolute!important;
+    visibility: hidden
+}
+
+
+/**********************************************************
+* BASIC AESTHETIC STYLES (multi)                         *
+**********************************************************/
+
+.selectize-control.multi .selectize-input.disabled {
+    background-color: #fafafa;
+}
+
+
+/**********************************************************
+* LAYOUT STYLES (mandatory)                              *
+**********************************************************/
+
+.selectize-control {
+    position: relative;
+}
+
+.selectize-input {
+    height: 47px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+.selectize-input:after {
+    content: ' ';
+    display: block;
+    clear: left;
+}
+
+.selectize-input .items {
+    display: inline;
+}
+
+.selectize-input>* {
+    vertical-align: baseline;
+    display: -moz-inline-stack;
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+}
+
+.selectize-input>input {
+    max-width: 100% !important;
+    text-indent: 0 !important;
+    border: 0 none !important;
+    background: none !important;
+    padding: 0 !important;
+    margin: 0;
+    line-height: inherit !important;
+    -webkit-user-select: auto !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+.selectize-input>input:focus {
+    outline: none !important;
+}
+
+.selectize-dropdown {
+    position: absolute;
+    z-index: 2;
+}
+
+.selectize-dropdown [data-selectable] {
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.selectize-input,
+.selectize-dropdown {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+/* --- file: "src/plugins/drag_drop/plugin.css" --- */
+
+.selectize-control.plugin-drag_drop.multi>.selectize-input>div.ui-sortable-placeholder {
+    visibility: visible !important;
+    background: #f2f2f2 !important;
+    background: rgba(0, 0, 0, 0.06) !important;
+    border: 0 none !important;
+    -webkit-box-shadow: inset 0 0 12px 4px #fff;
+    -moz-box-shadow: inset 0 0 12px 4px #fff;
+    box-shadow: inset 0 0 12px 4px #fff;
+}
+
+.selectize-control.plugin-drag_drop .ui-sortable-placeholder::after {
+    content: '!';
+    visibility: hidden;
+}
+
+.selectize-control.plugin-drag_drop .ui-sortable-helper {
+    -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2) !important;
+    -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2) !important;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2) !important;
+}
+
+
+/* --- file: "src/plugins/dropdown_header/plugin.css" --- */
+
+.selectize-dropdown-header {
+    padding: 6px 9px;
+    -moz-border-radius: 3px 3px 0 0;
+    -webkit-border-radius: 3px 3px 0 0;
+    border-radius: 3px 3px 0 0;
+}
+
+.selectize-dropdown-header-close {
+    float: right;
+    color: #ddd;
+    font-size: 20px !important;
+}
+
+.selectize-dropdown-header-close:hover {
+    color: #aaa;
+}
+
+
+/* --- file: "src/plugins/optgroup_columns/plugin.css" --- */
+
+.selectize-control.plugin-optgroup_columns .optgroup {
+    border-right: 1px solid #f2f2f2;
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.selectize-control.plugin-optgroup_columns .optgroup:last-child {
+    border-right: 0 none;
+}
+
+.selectize-control.plugin-optgroup_columns .optgroup-header {
+    border-top: 0 none;
+}
+
+
+/* --- file: "src/plugins/remove_button/plugin.css" --- */
+
+.selectize-control .item {
+    height: 25px;
+    line-height: 25px;
+}
+
+.selectize-control.plugin-remove_button .item {
+    position: relative;
+    padding-right: 24px !important;
+}
+
+.selectize-control.plugin-remove_button .item .remove {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 17px;
+    -moz-sizing: border-box;
+    -webkit-sizing: border-box;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    color: inherit;
+    vertical-align: middle;
+    display: inline-block;
+    padding: 7px 0 0 0;
+    line-height: 8px;
+    -webkit-border-radius: 0 2px 2px 0;
+    -moz-border-radius: 0 2px 2px 0;
+    border-radius: 0 2px 2px 0;
+    border-left: 1px solid #74b21e;
+}
+
+.selectize-control.plugin-remove_button .item .remove:hover {
+    border-left-color: #5e8f1a;
+    background: rgba(50, 90, 0, 0.15);
+}
